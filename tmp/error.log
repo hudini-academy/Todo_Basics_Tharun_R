@@ -419,3 +419,6 @@ ERROR	2024/06/06 17:06:00 handlers.go:157: Error 1062 (23000): Duplicate entry '
 ERROR	2024/06/06 17:38:24 handlers.go:157: Error 1062 (23000): Duplicate entry 'run' for key 'users.username'
 ERROR	2024/06/06 17:58:53 handlers.go:104: html/template:login.page.tmpl: "<" in attribute name: "\r\n        <button>fg</buttom>\r\n "
 ERROR	2024/06/06 17:58:54 handlers.go:104: html/template:login.page.tmpl: "<" in attribute name: "\r\n        <button>fg</buttom>\r\n "
+ERROR	2024/06/06 18:33:42 handlers.go:157: Error 1062 (23000): Duplicate entry '' for key 'users.username'
+ERROR	2024/06/06 18:33:44 handlers.go:157: Error 1062 (23000): Duplicate entry '' for key 'users.username'
+ERROR	2024/06/06 23:09:23 handlers.go:157: Error 1062 (23000): Duplicate entry '' for key 'users.username'

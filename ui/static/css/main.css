@@ -8,7 +8,7 @@ headers{
     height: 20vh;
     color: black;
     display: grid;
-    place-items: center;
+    place-items: center;    
 }
 
 #logout-button{
@@ -17,7 +17,29 @@ headers{
     justify-content: end;
 }
 
-button{
+.main-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-form > input[type="text"] {
+    width: 98%;
+    height: 10vh;
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    border: 1px solid #585858;
+    padding-left: 1%;
+}
+
+button, input[type="submit"]{
     font-size: 16px;
     padding: 10px 24px;
     border-radius: 5px;
@@ -25,6 +47,9 @@ button{
     border: none;
     background-color: black;
     color: white;
+}
+
+button{
     margin-top: 5vh;
 }
 
@@ -33,48 +58,38 @@ button > a{
     color: white;
 }
 
-form {
-    margin-bottom: 20px;
+.updateForm{
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
-label {
-    font-size: 2em;
+.updateForm > input[type="text"]{
+    width: 90%;
+    border: 1px solid #585858;
 }
 
-input[type="submit"] {
-    font-size: 18px;
-    padding: 10px 20px;
-    background-color: #228700;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+li{
+    margin-top: 7vh;
+    border-bottom: 1px solid #585858;
+    display: grid;
+    place-items: center;
 }
 
-ol {
-    list-style-type: none;
-    padding: 0;
+li > .item-container{
+    width: 90%;
 }
 
-li {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #fff;
+.deleteForm {
+    height: 10vh;
+    display: grid;
+    place-items: center;
 }
 
-form[action="/tasksdelete"] {
-    display: inline-block;
+.flash-message{
+    width: 80%;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-form[method="POST"] {
-    display: inline-block;
-    margin-right: 10px;
-}
-
-input[type="text"] {
-    border-radius: 10px;
-    font-size: 18px;
-    padding: 5px;
-    width: 200px;
-}
-
