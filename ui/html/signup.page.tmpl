@@ -1,0 +1,32 @@
+<html>
+<head>
+    <title>Tasks</title>
+    <link rel="stylesheet" href='/static/css/logger.css'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+    <headers>
+        <h2>SignUp</h2>
+    </headers>
+    <form method="POST" action="/signup">
+        <div class="form-field">
+            <label>Username</label><br>
+            <input style="font-size: 16px" type="text" style="font-size: 30px" name="username" />
+        </div>
+        <div  class="form-field">
+            <label>Password</label><br>
+            <input type="Password" style="font-size: 16px" name="password" />
+        </div>
+        <div class="form-field">
+            <input type="submit" >
+            <button><a href = "/login">login</a></button>
+        </div>
+    </form>
+
+    {{if .}}
+        <div class="flash-message">
+            {{.}}
+        </div>
+    {{end}}
+</body>
+</html>

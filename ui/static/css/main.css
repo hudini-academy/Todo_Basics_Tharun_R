@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+headers{
+    height: 20vh;
+    color: black;
+    display: grid;
+    place-items: center;
+}
+
+#logout-button{
+    width: 90%;
+    display: flex;
+    justify-content: end;
+}
+
+button{
+    font-size: 16px;
+    padding: 10px 24px;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    border: none;
+    background-color: black;
+    color: white;
+    margin-top: 5vh;
+}
+
+button > a{
+    text-decoration: none;
+    color: white;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 2em;
+}
+
+input[type="submit"] {
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #228700;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+form[action="/tasksdelete"] {
+    display: inline-block;
+}
+
+form[method="POST"] {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+input[type="text"] {
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px;
+    width: 200px;
+}
+

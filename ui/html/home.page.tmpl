@@ -1,0 +1,46 @@
+<!--//input form to add task
+//input form to add task
+//Ranging through task and displaying them-->
+<html>
+<head>
+    <title>Tasks</title>
+    <link rel="stylesheet" href='/static/css/main.css'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+    <headers>
+        <div id="logout-button">
+            <button><a href="/logout"> LOGOUT </a></button>
+        </div>
+        <div>
+            <h2>Todo Task</h2>
+        </div>
+    </headers>
+    
+    <form method="POST" action="/tasks">
+        <label>Add your task</label><br>
+        <input type="text" style="font-size: 30px" name="task" required></textarea>
+        <input type="submit" >
+    </form>
+    <ol>
+            {{if .Flash}}
+                <div class="flash-message">
+                    {{.Flash}}
+                </div>
+            {{end}}
+    {{range .Tasks}}
+            <li>{{.Title}}<br>{{.Created}}<br>{{.Expires}}
+            </li>
+                <form action="/delete?id={{.Id}}" method="POST">
+                <input type="hidden" name="method" value="delete">
+                <input type="submit" value="Delete">
+            </form>
+
+            <form method="POST" action="/update?id={{.Id}}">
+                <input type="text" name="update">
+                <input type="submit" value="Update">
+            </form>
+    {{end}}
+</ol>
+</body>
+</html>
