@@ -36,7 +36,7 @@ headers{
     margin-inline-end: 0px;
     font-weight: bold;
     border: 1px solid #585858;
-    padding-left: 1%;
+    padding: 12px 20px;
 }
 
 button, input[type="submit"]{
@@ -67,13 +67,15 @@ button > a{
 .updateForm > input[type="text"]{
     width: 90%;
     border: 1px solid #585858;
+    padding: 12px 20px;
 }
 
 li{
     margin-top: 7vh;
-    border-bottom: 1px solid #585858;
+    border: 1px solid #585858;
     display: grid;
     place-items: center;
+    background-color: #EFEFEF;
 }
 
 li > .item-container{
