@@ -23,8 +23,9 @@ func (app *application) tasks(w http.ResponseWriter, r *http.Request) {
 	//if POST POST appedend the data
 	if r.Method == http.MethodPost {
 		details := r.FormValue("task")
+		tags := r.FormValue("tags")
 		if len(strings.TrimSpace(details)) != 0 {
-			_, err := app.todo.Insert(details)
+			_, err := app.todo.Insert(details, tags)
 			if err != nil {
 				app.errorLog.Fatal(err.Error())
 			}
@@ -40,7 +41,6 @@ func (app *application) tasks(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	Data = s
 	err = ts.Execute(w, struct {
 		Tasks []*models.Todo
 		Flash string
@@ -52,7 +52,7 @@ func (app *application) tasks(w http.ResponseWriter, r *http.Request) {
 
 	if err != nil {
 		app.errorLog.Println(err.Error())
-		http.Error(w, "Internal Server Error", 501)
+		http.Error(w, "Internal Server Error", http.StatusNotImplemented)
 	}
 
 }
@@ -62,8 +62,14 @@ func (app *application) tasks(w http.ResponseWriter, r *http.Request) {
 // Delete the data based on the id
 // Redirect to the main page
 func (app *application) deleteTask(w http.ResponseWriter, r *http.Request) {
-	idToDelete, _ := strconv.Atoi(r.FormValue("id"))
-	errDel := app.todo.Delete(idToDelete)
+	title := r.FormValue("title")
+	errDel, isSpecial := app.todo.Delete(title)
+	fmt.Println(isSpecial)
+	if isSpecial {
+		fmt.Println(r.FormValue("title"))
+		app.special.Delete(r.FormValue("title"))
+	}
+
 	if errDel != nil {
 		app.errorLog.Println(errDel)
 		app.session.Put(r, "flash", "Task cannot be Deleted!")
@@ -169,4 +175,38 @@ func (app *application) logout(w http.ResponseWriter, r *http.Request) {
 	app.session.PopBool(r, "Authenticated")
 	app.session.Put(r, "flash", "User Logged Out")
 	http.Redirect(w, r, "/login", http.StatusSeeOther)
+}
+
+func (app *application) tags(w http.ResponseWriter, r *http.Request) {
+	ts, err := template.ParseFiles("./ui/html/tags.page.tmpl")
+	tag := r.FormValue("t")
+	if err != nil {
+		app.errorLog.Println(err.Error())
+		http.Error(w, "Internal Server Error", http.StatusNotImplemented)
+	}
+	data, todoerr := app.todo.GetAll()
+	if todoerr != nil {
+		app.errorLog.Println(err.Error())
+		http.Error(w, "Internal Server Error", http.StatusNotImplemented)
+	}
+
+	Tags := []models.Tag{}
+
+	for _, v := range data {
+		for _, i := range v.Tags {
+			if i == tag {
+				t := models.Tag{
+					Name: tag,
+					Task: *v,
+				}
+				Tags = append(Tags, t)
+			}
+		}
+	}
+
+	err = ts.Execute(w, Tags) //send tag data
+	if err != nil {
+		app.errorLog.Println(err)
+	}
+
 }

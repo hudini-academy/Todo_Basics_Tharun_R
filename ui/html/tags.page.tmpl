@@ -1,0 +1,40 @@
+<!--//input form to add task
+//input form to add task
+//Ranging through task and displaying them-->
+<html>
+<head>
+    <title>Tasks</title>
+    <link rel="stylesheet" href='/static/css/main.css'>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<body>
+    <headers>
+        <div id="logout-button">
+             <button><a href="/logout"> LOGOUT </a></button>
+        </div>
+        <div>
+            <h2>Todo Tags</h2>
+        </div>
+    </headers>
+    <div id="specialbtn">
+        <button><a href="/special"> Special </a></button>
+        <button><a href="/"> Task </a></button>
+     <div>
+    
+    <ol>
+        {{range .}}
+            <li>
+                <div class="item-container">
+                    <h2>Tag: {{.Name}}</h2>
+                    <div>
+                        {{ .Task.Title }}
+                        {{ .Task.Created }}
+                        {{ .Task.Expires }}
+                    </div>
+                    
+                </div>
+            </li>
+        {{end}}
+</ol>
+</body>
+</html>

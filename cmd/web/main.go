@@ -9,13 +9,13 @@ import (
 	"time"
 
 	"Todo.com/m/pkg/models/mysql"
-	"github.com/bmizerany/pat"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/golangcollege/sessions"
 )
 
 // Struct for dependency Injection
 type application struct {
+	special  *mysql.SpTodoModel
 	todo     *mysql.TodoModel
 	user     *mysql.UserModel
 	errorLog *log.Logger
@@ -24,6 +24,7 @@ type application struct {
 }
 
 func main() {
+	//all flag
 	addr := flag.String("addr", ":4000", "HTTP network address")
 	dsn := flag.String("dsn", "root:root@/todo?parseTime=True", "MySql Database String")
 	secret := flag.String("secret", "s6Ndh+pPbnzHbS*+9Pk8qGWhTzbpa@ge", "Secret key session")
@@ -31,6 +32,7 @@ func main() {
 
 	session := sessions.New([]byte(*secret))
 	session.Lifetime = 12 * time.Hour
+
 	//Accesing a file for storing the Information Logs
 	infoF, errI := os.OpenFile("./tmp/info.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	if errI != nil {
@@ -62,36 +64,18 @@ func main() {
 	app := &application{
 		todo:     &mysql.TodoModel{DB: db},
 		user:     &mysql.UserModel{DB: db},
+		special:  &mysql.SpTodoModel{DB: db},
 		infoLog:  infoLog,
 		errorLog: errorLog,
 		session:  session,
 	}
 
-	//handling the routes
-	mux := pat.New()
-	mux.Get("/signup", app.session.Enable(http.HandlerFunc(app.signUpForm)))
-	mux.Post("/signup", app.session.Enable(http.HandlerFunc(app.signUp)))
-	mux.Post("/login", app.session.Enable(http.HandlerFunc(app.login)))
-	mux.Get("/login", app.session.Enable(http.HandlerFunc(app.loginPage)))
-	mux.Get("/logout", app.session.Enable(http.HandlerFunc(app.logout)))
-	mux.Get("/", app.session.Enable(app.authenticate(http.HandlerFunc(app.tasks))))
-	mux.Post("/tasks", app.session.Enable(app.authenticate(http.HandlerFunc(app.tasks))))
-	mux.Post("/delete", app.session.Enable(http.HandlerFunc(app.deleteTask)))
-	mux.Post("/update", app.session.Enable(http.HandlerFunc(app.updateTask)))
-	mux.Get("/panic", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		panic("Intentional panic for testing purposes")
-	}))
-
 	//struct for server
 	srv := &http.Server{
 		Addr:     *addr,
 		ErrorLog: errorLog,
-		Handler:  app.LogRequest(app.secureHeaders((mux))),
+		Handler:  app.LogRequest(app.secureHeaders((app.routes()))),
 	}
-
-	//adding the static css file to fileserver
-	fileServer := http.FileServer(http.Dir("./ui/static/"))
-	mux.Get("/static/", http.StripPrefix("/static", fileServer))
 
 	//listening to the port
 	infoLog.Printf("Starting server on %s", *addr)

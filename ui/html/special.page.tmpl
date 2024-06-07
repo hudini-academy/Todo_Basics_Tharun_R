@@ -3,7 +3,7 @@
 //Ranging through task and displaying them-->
 <html>
 <head>
-    <title>Tasks</title>
+    <title>Special</title>
     <link rel="stylesheet" href='/static/css/main.css'>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
 </head>
@@ -19,19 +19,13 @@
              <button><a href="/logout"> LOGOUT </a></button>
         </div>
         <div>
-            <h2>Todo Task</h2>
+            <h2>Special Task</h2>
         </div>
     </headers>
     <div id="specialbtn">
-        <button><a href="/special"> Special </a></button>
+        <button><a href="/"> Todo </a></button>
      <div>
     
-    <form method="POST" action="/tasks" class="main-form">
-        <input type="text" style="font-size: 30px" name="task" required />
-        <label>Tags</label>
-        <input type="text" style="font-size: 30px" name="tags" required />
-        <input type="submit" >
-    </form>
     <ol>
         {{range .Tasks}}
             <li>
@@ -39,19 +33,13 @@
                 <div class="item-container">
                     <h2>{{.Title}}</h2>
                     <p>Created: {{.Created}}<br> Expires: {{.Expires}}</p>
-                    <ol>
-                        {{range .Tags}}
-                            <li> <a href="/tags?t={{ . }}"> {{ . }} </a></li>
-                        {{ end }}
-                            
-                    </ol>
 
-                    <form method="POST" action="/update?id={{.Id}}" class="updateForm">
+                    <form method="POST" action="/special/update?id={{.Id}}" class="updateForm">
                         <input type="text" name="update">
                         <input type="submit" value="Update">
                     </form>
 
-                    <form class="deleteForm" action="/delete?title={{.Title}}" method="POST">
+                    <form class="deleteForm" action="/special/delete?title={{.Title}}" method="POST">
                         <input type="submit" value="Delete">
                     </form>
                 </div>

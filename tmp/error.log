@@ -1,424 +1,132 @@
-ERROR	2024/06/06 14:24:29 server.go:3411: http: panic serving [::1]:61757: session: cache not present in request context
-goroutine 34 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0x1064620?, 0x13fd620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0xc000035ab8?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0x35b00?, 0x2853b49b008?, {0x10d462f, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-github.com/golangcollege/sessions.(*Session).GetBool(0xc000030050?, 0xcfe337?, {0x10d462f?, 0xcd930b?})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:198 +0x18
-main.main.(*application).authenticate.func11({0x117d990, 0xc000208000}, 0xc0001c6000)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:30 +0x52
-net/http.HandlerFunc.ServeHTTP(0xcf9139?, {0x117d990?, 0xc000208000?}, 0xc000035b68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00018c690?}, {0x117d990?, 0xc000208000?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc00018a090, {0x117e1a8, 0xc00018c5a0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:24:34 server.go:3411: http: panic serving [::1]:61758: session: cache not present in request context
-goroutine 35 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0x1064620?, 0x13fd620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0xc0001c1ab8?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0x1c1b00?, 0x2853b49b008?, {0x10d462f, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-github.com/golangcollege/sessions.(*Session).GetBool(0xc000030090?, 0xcfe337?, {0x10d462f?, 0xcd930b?})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:198 +0x18
-main.main.(*application).authenticate.func11({0x117d990, 0xc0002081c0}, 0xc0001c6120)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:30 +0x52
-net/http.HandlerFunc.ServeHTTP(0xcf9139?, {0x117d990?, 0xc0002081c0?}, 0xc0001c1b68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00018c780?}, {0x117d990?, 0xc0002081c0?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc00018a120, {0x117e1a8, 0xc00018c5a0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:24:34 server.go:3411: http: panic serving [::1]:61759: session: cache not present in request context
-goroutine 21 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0x1064620?, 0x13fd620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0xc0001bbab8?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0x1bbb00?, 0x2853b931e08?, {0x10d462f, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-github.com/golangcollege/sessions.(*Session).GetBool(0xc00008aec0?, 0xcfe337?, {0x10d462f?, 0xcd930b?})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:198 +0x18
-main.main.(*application).authenticate.func11({0x117d990, 0xc00011a000}, 0xc0000e85a0)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:30 +0x52
-net/http.HandlerFunc.ServeHTTP(0xcf9139?, {0x117d990?, 0xc00011a000?}, 0xc0001bbb68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc000089770?}, {0x117d990?, 0xc00011a000?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc0000d4090, {0x117e1a8, 0xc00018c5a0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:29:34 server.go:3411: http: panic serving [::1]:61771: session: cache not present in request context
-goroutine 24 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0x1064620?, 0x13fd620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0xc00006fab8?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0x6fb00?, 0x2853b931e08?, {0x10d462f, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-github.com/golangcollege/sessions.(*Session).GetBool(0xc00008af10?, 0xcfe337?, {0x10d462f?, 0xcd930b?})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:198 +0x18
-main.main.(*application).authenticate.func11({0x117d990, 0xc00011a1c0}, 0xc0000e87e0)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:30 +0x52
-net/http.HandlerFunc.ServeHTTP(0xcf9139?, {0x117d990?, 0xc00011a1c0?}, 0xc00006fb68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc000089a40?}, {0x117d990?, 0xc00011a1c0?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc0000d42d0, {0x117e1a8, 0xc00018c5a0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:34:53 server.go:3411: http: panic serving [::1]:61809: session: cache not present in request context
+ERROR	2024/06/07 14:57:50 server.go:3411: http: panic serving [::1]:51518: runtime error: invalid memory address or nil pointer dereference
 goroutine 8 [running]:
 net/http.(*conn).serve.func1()
 	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xf44620?, 0x12dd620?})
+panic({0x12c2220?, 0x1654da0?})
 	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x0?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0xc000031030?, 0xbde337?, {0xfb462c, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-main.main.(*application).authenticate.func11({0x105d950, 0xc00016a000}, 0xc00012c5a0)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x52
-net/http.HandlerFunc.ServeHTTP(0xbd9139?, {0x105d950?, 0xc00016a000?}, 0xc000035b68?)
+database/sql.(*Rows).closemuRUnlockIfHeldByScan(0xc000035550?)
+	C:/Program Files/Go/src/database/sql/sql.go:3366 +0xe
+database/sql.(*Rows).Close(0x0)
+	C:/Program Files/Go/src/database/sql/sql.go:3393 +0x18
+panic({0x12c2220?, 0x1654da0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+database/sql.(*Rows).closemuRUnlockIfHeldByScan(0xc00002f450?)
+	C:/Program Files/Go/src/database/sql/sql.go:3366 +0xe
+database/sql.(*Rows).Next(0x0)
+	C:/Program Files/Go/src/database/sql/sql.go:3014 +0x1c
+Todo.com/m/pkg/models/mysql.(*TodoModel).GetTags(0x0?, {0x1323045?, 0xc000035790?})
+	C:/Users/TharunRajkumar/Documents/Todo/pkg/models/mysql/todo.go:120 +0xc6
+main.(*application).tags(0xc00002d770, {0x13d3460, 0xc00003b500}, 0xc0001642a0?)
+	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/handlers.go:187 +0x148
+net/http.HandlerFunc.ServeHTTP(0xc00012c5a0?, {0x13d3460?, 0xc00003b500?}, 0x3d?)
 	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00002dda0?}, {0x105d950?, 0xc00016a000?}, 0x6?)
+main.main.(*Session).Enable.func18({0x13d3430, 0xc000008438}, 0xc00012c5a0)
+	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc00002db90?, {0x13d3430?, 0xc000008438?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc000008390, {0x13d3430, 0xc000008438}, 0xc00012c5a0)
+	C:/Users/TharunRajkumar/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.main.(*application).secureHeaders.func19({0x13d35b0, 0xc000166000}, 0xc00012c5a0)
+	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:51 +0x136
+net/http.HandlerFunc.ServeHTTP(0xc000018468?, {0x13d35b0?, 0xc000166000?}, 0xc000035ae8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.main.(*application).LogRequest.func20({0x13d35b0, 0xc000166000}, 0xc00012c5a0)
+	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:22 +0x150
+net/http.HandlerFunc.ServeHTTP(0xf49139?, {0x13d35b0?, 0xc000166000?}, 0xc000035b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000182030?}, {0x13d35b0?, 0xc000166000?}, 0x6?)
 	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc000150090, {0x105e168, 0xc00002dcb0})
+net/http.(*conn).serve(0xc000150090, {0x13d3dc8, 0xc00002dec0})
 	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
 created by net/http.(*Server).Serve in goroutine 1
 	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:34:54 server.go:3411: http: panic serving [::1]:61810: session: cache not present in request context
+ERROR	2024/06/07 14:57:50 server.go:3411: http: panic serving [::1]:51519: runtime error: invalid memory address or nil pointer dereference
 goroutine 18 [running]:
 net/http.(*conn).serve.func1()
 	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xf44620?, 0x12dd620?})
+panic({0x12c2220?, 0x1654da0?})
 	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x0?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0xc000031070?, 0xbde337?, {0xfb462c, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-main.main.(*application).authenticate.func11({0x105d950, 0xc00016a1c0}, 0xc0001a4000)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x52
-net/http.HandlerFunc.ServeHTTP(0xbd9139?, {0x105d950?, 0xc00016a1c0?}, 0xc000195b68?)
+database/sql.(*Rows).closemuRUnlockIfHeldByScan(0xc0001dd550?)
+	C:/Program Files/Go/src/database/sql/sql.go:3366 +0xe
+database/sql.(*Rows).Close(0x0)
+	C:/Program Files/Go/src/database/sql/sql.go:3393 +0x18
+panic({0x12c2220?, 0x1654da0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+database/sql.(*Rows).closemuRUnlockIfHeldByScan(0xc00002f450?)
+	C:/Program Files/Go/src/database/sql/sql.go:3366 +0xe
+database/sql.(*Rows).Next(0x0)
+	C:/Program Files/Go/src/database/sql/sql.go:3014 +0x1c
+Todo.com/m/pkg/models/mysql.(*TodoModel).GetTags(0x0?, {0x1323045?, 0xc0001dd790?})
+	C:/Users/TharunRajkumar/Documents/Todo/pkg/models/mysql/todo.go:120 +0xc6
+main.(*application).tags(0xc00002d770, {0x13d3460, 0xc000190400}, 0xc000182b40?)
+	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/handlers.go:187 +0x148
+net/http.HandlerFunc.ServeHTTP(0xc000192120?, {0x13d3460?, 0xc000190400?}, 0x3d?)
 	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc000186090?}, {0x105d950?, 0xc00016a1c0?}, 0x6?)
+main.main.(*Session).Enable.func18({0x13d3430, 0xc0001c80a8}, 0xc000192120)
+	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc00002db90?, {0x13d3430?, 0xc0001c80a8?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc000008390, {0x13d3430, 0xc0001c80a8}, 0xc000192120)
+	C:/Users/TharunRajkumar/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.main.(*application).secureHeaders.func19({0x13d35b0, 0xc0001c40e0}, 0xc000192120)
+	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:51 +0x136
+net/http.HandlerFunc.ServeHTTP(0xc0001aa048?, {0x13d35b0?, 0xc0001c40e0?}, 0xc0001a3ae8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.main.(*application).LogRequest.func20({0x13d35b0, 0xc0001c40e0}, 0xc000192120)
+	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:22 +0x150
+net/http.HandlerFunc.ServeHTTP(0xf49139?, {0x13d35b0?, 0xc0001c40e0?}, 0xc0001a3b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000182120?}, {0x13d35b0?, 0xc0001c40e0?}, 0x6?)
 	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc00018a000, {0x105e168, 0xc00002dcb0})
+net/http.(*conn).serve(0xc00019a000, {0x13d3dc8, 0xc00002dec0})
 	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
 created by net/http.(*Server).Serve in goroutine 1
 	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:34:54 server.go:3411: http: panic serving [::1]:61811: session: cache not present in request context
-goroutine 34 [running]:
+ERROR	2024/06/07 14:57:50 server.go:3411: http: panic serving [::1]:51520: runtime error: invalid memory address or nil pointer dereference
+goroutine 21 [running]:
 net/http.(*conn).serve.func1()
 	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xf44620?, 0x12dd620?})
+panic({0x12c2220?, 0x1654da0?})
 	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x0?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0xc0000310b0?, 0xbde337?, {0xfb462c, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-main.main.(*application).authenticate.func11({0x105d950, 0xc00016a380}, 0xc0000a6000)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x52
-net/http.HandlerFunc.ServeHTTP(0xbd9139?, {0x105d950?, 0xc00016a380?}, 0xc00009bb68?)
+database/sql.(*Rows).closemuRUnlockIfHeldByScan(0xc0001dd550?)
+	C:/Program Files/Go/src/database/sql/sql.go:3366 +0xe
+database/sql.(*Rows).Close(0x0)
+	C:/Program Files/Go/src/database/sql/sql.go:3393 +0x18
+panic({0x12c2220?, 0x1654da0?})
+	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
+database/sql.(*Rows).closemuRUnlockIfHeldByScan(0xc00002f450?)
+	C:/Program Files/Go/src/database/sql/sql.go:3366 +0xe
+database/sql.(*Rows).Next(0x0)
+	C:/Program Files/Go/src/database/sql/sql.go:3014 +0x1c
+Todo.com/m/pkg/models/mysql.(*TodoModel).GetTags(0x0?, {0x1323045?, 0xc0001dd790?})
+	C:/Users/TharunRajkumar/Documents/Todo/pkg/models/mysql/todo.go:120 +0xc6
+main.(*application).tags(0xc00002d770, {0x13d3460, 0xc000190880}, 0xc000183a10?)
+	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/handlers.go:187 +0x148
+net/http.HandlerFunc.ServeHTTP(0xc00012ca20?, {0x13d3460?, 0xc000190880?}, 0x3d?)
 	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00008e090?}, {0x105d950?, 0xc00016a380?}, 0x6?)
+main.main.(*Session).Enable.func18({0x13d3430, 0xc0001c82a0}, 0xc00012ca20)
+	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/session.go:155 +0x14c
+net/http.HandlerFunc.ServeHTTP(0xc00002db90?, {0x13d3430?, 0xc0001c82a0?}, 0x3?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+github.com/bmizerany/pat.(*PatternServeMux).ServeHTTP(0xc000008390, {0x13d3430, 0xc0001c82a0}, 0xc00012ca20)
+	C:/Users/TharunRajkumar/go/pkg/mod/github.com/bmizerany/pat@v0.0.0-20210406213842-e4b6760bdd6f/mux.go:117 +0x191
+main.main.(*application).secureHeaders.func19({0x13d35b0, 0xc0001c42a0}, 0xc00012ca20)
+	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:51 +0x136
+net/http.HandlerFunc.ServeHTTP(0xc0001aa0a8?, {0x13d35b0?, 0xc0001c42a0?}, 0xc0001a3ae8?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+main.main.(*application).LogRequest.func20({0x13d35b0, 0xc0001c42a0}, 0xc00012ca20)
+	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:22 +0x150
+net/http.HandlerFunc.ServeHTTP(0xf49139?, {0x13d35b0?, 0xc0001c42a0?}, 0xc0001a3b68?)
+	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
+net/http.serverHandler.ServeHTTP({0xc000164f00?}, {0x13d35b0?, 0xc0001c42a0?}, 0x6?)
 	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc000092000, {0x105e168, 0xc00002dcb0})
+net/http.(*conn).serve(0xc00019a2d0, {0x13d3dc8, 0xc00002dec0})
 	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
 created by net/http.(*Server).Serve in goroutine 1
 	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:34:59 server.go:3411: http: panic serving [::1]:61812: session: cache not present in request context
-goroutine 19 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xf44620?, 0x12dd620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x0?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0xc0000310f0?, 0xbde337?, {0xfb462c, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-main.main.(*application).authenticate.func11({0x105d950, 0xc00016a540}, 0xc0001a4120)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x52
-net/http.HandlerFunc.ServeHTTP(0xbd9139?, {0x105d950?, 0xc00016a540?}, 0xc000197b68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc000186180?}, {0x105d950?, 0xc00016a540?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc00018a090, {0x105e168, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:35:29 server.go:3411: http: panic serving [::1]:61813: session: cache not present in request context
-goroutine 13 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xf44620?, 0x12dd620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x0?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0xc0000a4020?, 0xbde337?, {0xfb462c, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-main.main.(*application).authenticate.func11({0x105d950, 0xc0000bc000}, 0xc00012cb40)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x52
-net/http.HandlerFunc.ServeHTTP(0xbd9139?, {0x105d950?, 0xc0000bc000?}, 0xc000197b68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00017e210?}, {0x105d950?, 0xc0000bc000?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc0001505a0, {0x105e168, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:35:29 server.go:3411: http: panic serving [::1]:61814: session: cache not present in request context
-goroutine 20 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xf44620?, 0x12dd620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x0?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0xc0000a4060?, 0xbde337?, {0xfb462c, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-main.main.(*application).authenticate.func11({0x105d950, 0xc0000bc1c0}, 0xc00012cc60)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x52
-net/http.HandlerFunc.ServeHTTP(0xbd9139?, {0x105d950?, 0xc0000bc1c0?}, 0xc000195b68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00017e270?}, {0x105d950?, 0xc0000bc1c0?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc00018a120, {0x105e168, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:35:29 server.go:3411: http: panic serving [::1]:61815: session: cache not present in request context
-goroutine 37 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xf44620?, 0x12dd620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x0?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0xc00019e030?, 0xbde337?, {0xfb462c, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-main.main.(*application).authenticate.func11({0x105d950, 0xc0001ba000}, 0xc0000a6120)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x52
-net/http.HandlerFunc.ServeHTTP(0xbd9139?, {0x105d950?, 0xc0001ba000?}, 0xc00009db68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00008e2a0?}, {0x105d950?, 0xc0001ba000?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc0000922d0, {0x105e168, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:36:00 server.go:3411: http: panic serving [::1]:61822: session: cache not present in request context
-goroutine 8 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0x434620?, 0x7cd620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0xc000035ab8?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Get(0x35b00?, 0x22644feb008?, {0x4a462c, 0xd})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:91 +0x3c
-github.com/golangcollege/sessions.(*Session).GetBool(0xc000031030?, 0xce337?, {0x4a462c?, 0xa930b?})
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:198 +0x18
-main.main.(*application).authenticate.func11({0x54d950, 0xc00016a000}, 0xc00012c5a0)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x52
-net/http.HandlerFunc.ServeHTTP(0xc9139?, {0x54d950?, 0xc00016a000?}, 0xc000035b68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00002dda0?}, {0x54d950?, 0xc00016a000?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc000150090, {0x54e168, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:38:05 server.go:3411: http: panic serving [::1]:61837: session: cache not present in request context
-goroutine 9 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xea5620?, 0x123e620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x160cc1d3e88?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Keys(0xc0001a6010?, 0xb3e337?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:151 +0x25
-main.main.(*application).authenticate.func11({0xfbe9b0, 0xc0001a8000}, 0xc0000ac6c0)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x46
-net/http.HandlerFunc.ServeHTTP(0xb39139?, {0xfbe9b0?, 0xc0001a8000?}, 0xc000035b68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00002de90?}, {0xfbe9b0?, 0xc0001a8000?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc0000d0120, {0xfbf1c8, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:38:06 server.go:3411: http: panic serving [::1]:61836: session: cache not present in request context
-goroutine 8 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xea5620?, 0x123e620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x160cc1d1868?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Keys(0xc00011e010?, 0xb3e337?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:151 +0x25
-main.main.(*application).authenticate.func11({0xfbe9b0, 0xc000120000}, 0xc0000ac5a0)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x46
-net/http.HandlerFunc.ServeHTTP(0xb39139?, {0xfbe9b0?, 0xc000120000?}, 0xc00006bb68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00002dda0?}, {0xfbe9b0?, 0xc000120000?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc0000d0090, {0xfbf1c8, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:38:06 server.go:3411: http: panic serving [::1]:61838: session: cache not present in request context
-goroutine 10 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xea5620?, 0x123e620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x160cc1d1868?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Keys(0xc00011e050?, 0xb3e337?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:151 +0x25
-main.main.(*application).authenticate.func11({0xfbe9b0, 0xc0001201c0}, 0xc0000ac7e0)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x46
-net/http.HandlerFunc.ServeHTTP(0xb39139?, {0xfbe9b0?, 0xc0001201c0?}, 0xc0000efb68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc0000f2000?}, {0xfbe9b0?, 0xc0001201c0?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc0000d01b0, {0xfbf1c8, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:38:06 server.go:3411: http: panic serving [::1]:61839: session: cache not present in request context
-goroutine 36 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xea5620?, 0x123e620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x16086c0b008?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Keys(0xc000031050?, 0xb3e337?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:151 +0x25
-main.main.(*application).authenticate.func11({0xfbe9b0, 0xc0000f8000}, 0xc00018c240)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x46
-net/http.HandlerFunc.ServeHTTP(0xb39139?, {0xfbe9b0?, 0xc0000f8000?}, 0xc0000efb68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc0001860f0?}, {0xfbe9b0?, 0xc0000f8000?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc000106240, {0xfbf1c8, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:38:11 server.go:3411: http: panic serving [::1]:61840: session: cache not present in request context
-goroutine 12 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xea5620?, 0x123e620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x16086c0b008?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Keys(0xc000031090?, 0xb3e337?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:151 +0x25
-main.main.(*application).authenticate.func11({0xfbe9b0, 0xc0000f81c0}, 0xc00016c000)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x46
-net/http.HandlerFunc.ServeHTTP(0xb39139?, {0xfbe9b0?, 0xc0000f81c0?}, 0xc0000efb68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00010a240?}, {0xfbe9b0?, 0xc0000f81c0?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc0000d0360, {0xfbf1c8, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:38:41 server.go:3411: http: panic serving [::1]:61841: session: cache not present in request context
-goroutine 37 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xea5620?, 0x123e620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x16086c0b008?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Keys(0xc0000310d0?, 0xb3e337?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:151 +0x25
-main.main.(*application).authenticate.func11({0xfbe9b0, 0xc0000f8380}, 0xc00018c360)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x46
-net/http.HandlerFunc.ServeHTTP(0xb39139?, {0xfbe9b0?, 0xc0000f8380?}, 0xc0000ebb68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc000186150?}, {0xfbe9b0?, 0xc0000f8380?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc0001062d0, {0xfbf1c8, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:38:41 server.go:3411: http: panic serving [::1]:61843: session: cache not present in request context
-goroutine 38 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xea5620?, 0x123e620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x16086c0b008?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Keys(0xc000031110?, 0xb3e337?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:151 +0x25
-main.main.(*application).authenticate.func11({0xfbe9b0, 0xc0000f8540}, 0xc00016c120)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x46
-net/http.HandlerFunc.ServeHTTP(0xb39139?, {0xfbe9b0?, 0xc0000f8540?}, 0xc000201b68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc00010a360?}, {0xfbe9b0?, 0xc0000f8540?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc000106360, {0xfbf1c8, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 14:38:41 server.go:3411: http: panic serving [::1]:61844: session: cache not present in request context
-goroutine 16 [running]:
-net/http.(*conn).serve.func1()
-	C:/Program Files/Go/src/net/http/server.go:1898 +0xbe
-panic({0xea5620?, 0x123e620?})
-	C:/Program Files/Go/src/runtime/panic.go:770 +0x132
-github.com/golangcollege/sessions.getCacheFromRequestContext(0x160cc1d1868?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:63 +0xa6
-github.com/golangcollege/sessions.(*Session).Keys(0xc00011e0b0?, 0xb3e337?)
-	C:/Users/TharunRajkumar/go/pkg/mod/github.com/golangcollege/sessions@v1.2.0/cache.go:151 +0x25
-main.main.(*application).authenticate.func11({0xfbe9b0, 0xc000120380}, 0xc0000ac900)
-	C:/Users/TharunRajkumar/Documents/Todo/cmd/web/middleware.go:31 +0x46
-net/http.HandlerFunc.ServeHTTP(0xb39139?, {0xfbe9b0?, 0xc000120380?}, 0xc000201b68?)
-	C:/Program Files/Go/src/net/http/server.go:2166 +0x29
-net/http.serverHandler.ServeHTTP({0xc0000f2420?}, {0xfbe9b0?, 0xc000120380?}, 0x6?)
-	C:/Program Files/Go/src/net/http/server.go:3137 +0x8e
-net/http.(*conn).serve(0xc0000d0750, {0xfbf1c8, 0xc00002dcb0})
-	C:/Program Files/Go/src/net/http/server.go:2039 +0x5e8
-created by net/http.(*Server).Serve in goroutine 1
-	C:/Program Files/Go/src/net/http/server.go:3285 +0x4b4
-ERROR	2024/06/06 16:48:57 handlers.go:104: template: login.page.tmpl:16:9: executing "login.page.tmpl" at <.Flash>: can't evaluate field Flash in type string
-ERROR	2024/06/06 16:49:01 handlers.go:104: template: login.page.tmpl:16:9: executing "login.page.tmpl" at <.Flash>: can't evaluate field Flash in type string
-ERROR	2024/06/06 17:01:09 handlers.go:157: Error 1062 (23000): Duplicate entry 'run' for key 'users.username'
-ERROR	2024/06/06 17:03:00 handlers.go:157: Error 1062 (23000): Duplicate entry 'run' for key 'users.username'
-ERROR	2024/06/06 17:03:00 handlers.go:159: Error 1062 (23000): Duplicate entry 'run' for key 'users.username'
-ERROR	2024/06/06 17:04:13 handlers.go:157: Error 1062 (23000): Duplicate entry 'run' for key 'users.username'
-ERROR	2024/06/06 17:04:16 handlers.go:157: Error 1062 (23000): Duplicate entry 'run' for key 'users.username'
-ERROR	2024/06/06 17:06:00 handlers.go:157: Error 1062 (23000): Duplicate entry 'run' for key 'users.username'
-ERROR	2024/06/06 17:38:24 handlers.go:157: Error 1062 (23000): Duplicate entry 'run' for key 'users.username'
-ERROR	2024/06/06 17:58:53 handlers.go:104: html/template:login.page.tmpl: "<" in attribute name: "\r\n        <button>fg</buttom>\r\n "
-ERROR	2024/06/06 17:58:54 handlers.go:104: html/template:login.page.tmpl: "<" in attribute name: "\r\n        <button>fg</buttom>\r\n "
-ERROR	2024/06/06 18:33:42 handlers.go:157: Error 1062 (23000): Duplicate entry '' for key 'users.username'
-ERROR	2024/06/06 18:33:44 handlers.go:157: Error 1062 (23000): Duplicate entry '' for key 'users.username'
-ERROR	2024/06/06 23:09:23 handlers.go:157: Error 1062 (23000): Duplicate entry '' for key 'users.username'
+ERROR	2024/06/07 15:14:19 handlers.go:209: template: tags.page.tmpl:13:17: executing "tags.page.tmpl" at <.Flash>: can't evaluate field Flash in type []models.Tag
+ERROR	2024/06/07 15:14:40 handlers.go:209: template: tags.page.tmpl:13:17: executing "tags.page.tmpl" at <.Flash>: can't evaluate field Flash in type []models.Tag
+ERROR	2024/06/07 15:14:49 handlers.go:209: template: tags.page.tmpl:13:17: executing "tags.page.tmpl" at <.Flash>: can't evaluate field Flash in type []models.Tag
+ERROR	2024/06/07 15:15:13 handlers.go:209: template: tags.page.tmpl:13:17: executing "tags.page.tmpl" at <.Flash>: can't evaluate field Flash in type []models.Tag
+ERROR	2024/06/07 15:15:55 handlers.go:209: template: tags.page.tmpl:25:16: executing "tags.page.tmpl" at <.Tags>: can't evaluate field Tags in type []models.Tag
+ERROR	2024/06/07 15:17:33 handlers.go:209: template: tags.page.tmpl:30:27: executing "tags.page.tmpl" at <.Todo>: can't evaluate field Todo in type models.Tag

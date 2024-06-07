@@ -11,6 +11,12 @@ headers{
     place-items: center;    
 }
 
+#specialbtn{
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
 #logout-button{
     width: 90%;
     display: flex;
